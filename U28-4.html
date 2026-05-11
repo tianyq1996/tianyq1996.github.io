@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>作品展示墙</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            font-family:Microsoft YaHei;
+        }
+        body {
+            background:#ADD8E6;
+            padding:20px;
+        }
+        .container {
+            max-width:1200px;
+            margin:0 auto;
+        }
+        h1 {
+            color:#e74c3c;
+            font-size:36px;
+            background:#fff;
+            padding:15px 30px;
+            border:3px solid #e74c3c;
+            border-radius:8px;
+            display:inline-block;
+            position:relative;
+            left:50%;
+            transform:translateX(-50%);
+            margin-bottom:40px;
+        }
+        .grid {
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:30px;
+        }
+        .card {
+            background:#fff;
+            border:3px solid #e74c3c;
+            border-radius:8px;
+            padding:20px;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:15px;
+        }
+        .card-img {
+            width:100%;
+            height:180px;
+            background:#f0f0f0;
+            border-radius:4px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#999;
+        }
+        .card-info {
+            text-align:center;
+        }
+        .card-title {
+            font-size:18px;
+            font-weight:bold;
+            margin-bottom:8px;
+        }
+        .like-btn {
+            display:flex;
+            align-items:center;
+            gap:8px;
+            background:#fff;
+            border:2px solid #e74c3c;
+            color:#e74c3c;
+            padding:8px 16px;
+            border-radius:20px;
+            cursor:pointer;
+        }
+        .like-btn:hover {
+            background:#e74c3c;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>作品展示墙</h1>
+        <div class="grid">
+            <div class="card">
+                <div class="card-img">作品图片占位</div>
+                <div class="card-info">
+                    <div class="card-title">《夏日午后》</div>
+                    <div class="card-author">作者：小明</div>
+                </div>
+                <button class="like-btn" onclick="addLike(this)">
+                    <span>❤️</span>
+                    <span class="like-count">0</span>
+                </button>
+            </div>
+            <div class="card">
+                <div class="card-img">作品图片占位</div>
+                <div class="card-info">
+                    <div class="card-title">《星空下的约定》</div>
+                    <div class="card-author">作者：小红</div>
+                </div>
+                <button class="like-btn" onclick="addLike(this)">
+                    <span>❤️</span>
+                    <span class="like-count">0</span>
+                </button>
+            </div>
+            <div class="card">
+                <div class="card-img">作品图片占位</div>
+                <div class="card-info">
+                    <div class="card-title">《城市剪影》</div>
+                    <div class="card-author">作者：小刚</div>
+                </div>
+                <button class="like-btn" onclick="addLike(this)">
+                    <span>❤️</span>
+                    <span class="like-count">0</span>
+                </button>
+            </div>
+            <div class="card">
+                <div class="card-img">作品图片占位</div>
+                <div class="card-info">
+                    <div class="card-title">《森林密语》</div>
+                    <div class="card-author">作者：小美</div>
+                </div>
+                <button class="like-btn" onclick="addLike(this)">
+                    <span>❤️</span>
+                    <span class="like-count">0</span>
+                </button>
+            </div>
+            <div class="card">
+                <div class="card-img">作品图片占位</div>
+                <div class="card-info">
+                    <div class="card-title">《海浪与礁石》</div>
+                    <div class="card-author">作者：阿杰</div>
+                </div>
+                <button class="like-btn" onclick="addLike(this)">
+                    <span>❤️</span>
+                    <span class="like-count">0</span>
+                </button>
+            </div>
+            <div class="card">
+                <div class="card-img">作品图片占位</div>
+                <div class="card-info">
+                    <div class="card-title">《冬日暖阳》</div>
+                    <div class="card-author">作者：小雨</div>
+                </div>
+                <button class="like-btn" onclick="addLike(this)">
+                    <span>❤️</span>
+                    <span class="like-count">0</span>
+                </button>
+            </div>
+            <div class="card">
+                <div class="card-img">作品图片占位</div>
+                <div class="card-info">
+                    <div class="card-title">《未来都市》</div>
+                    <div class="card-author">作者：阿泽</div>
+                </div>
+                <button class="like-btn" onclick="addLike(this)">
+                    <span>❤️</span>
+                    <span class="like-count">0</span>
+                </button>
+            </div>
+            <div class="card">
+                <div class="card-img">作品图片占位</div>
+                <div class="card-info">
+                    <div class="card-title">《复古相机》</div>
+                    <div class="card-author">作者：小琳</div>
+                </div>
+                <button class="like-btn" onclick="addLike(this)">
+                    <span>❤️</span>
+                    <span class="like-count">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addLike(btn) {
+            const countSpan = btn.querySelector('.like-count');
+            let count = parseInt(countSpan.textContent);
+            count++;
+            countSpan.textContent = count;
+        }
+    </script>
+</body>
+</html>
